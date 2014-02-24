@@ -3,6 +3,6 @@ test:
     default:
       database: trackoid_test
       hosts:
-        - 127.0.0.1:27017
+        - 127.0.0.1:<%= ENV['BOXEN_MONGODB_PORT'] || 27017 %>
   options:
     allow_dynamic_fields: false
